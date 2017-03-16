@@ -9,9 +9,6 @@
         }
         #container{
             padding: 20px;
-            width: 60%;
-            height: 30%;
-            background-color: lightgrey;
             margin: auto;
             display: flex;
             flex-direction: row;
@@ -21,7 +18,7 @@
         }
         .item{
             width: 150px;
-            border: 1px solid #999;
+            border: 1px solid red;
             background: #00ffff;
         }
         #itm1{
@@ -35,27 +32,22 @@
         }
         #itm4{
             height: 200px;
+            border: 1px solid #00f;
         }
 
         @media screen and (max-width: 640px) {
             #container {
+                display: flex;
+                flex-wrap: wrap;
                 align-items: flex-start;
             }
-            #itm1{
-                -webkit-order: 1;
-                order: 1;
-            }
-            #itm2{
-                -webkit-order: 2;
-                order: 2;
-            }
-            #itm3{
-                -webkit-order: 3;
-                order: 3;
-            }
+            #itm1{ order: 2 }
+            #itm2{ order: 3 }
+            #itm3{ order: 4; margin-top: 20px; }
             #itm4 {
-                -webkit-order: 0;
-                order: 0;
+                height: 200px;
+                border: 1px solid #00f;
+                order: 1;
             }
         }
     </style>
