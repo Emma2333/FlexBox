@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            padding: 20px;
+            width: 60%;
+            height: 30%;
+            background-color: lightgrey;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;    /*可以再浏览器变窄是流淌*/
+        }
+        .item{
+            width: 150px;
+            border: 1px solid #999;
+            background: #00ffff;
+        }
+        #itm1{
+            height: 120px;
+        }
+        #itm2{
+            height: 100px;
+        }
+        #itm3{
+            height: 40px;
+        }
+        #itm4{
+            height: 200px;
+        }
+
+        @media screen and (max-width: 640px) {
+            #container {
+                align-items: flex-start;
+            }
+            #itm1{
+                -webkit-order: 1;
+                order: 1;
+            }
+            #itm2{
+                -webkit-order: 2;
+                order: 2;
+            }
+            #itm3{
+                -webkit-order: 3;
+                order: 3;
+            }
+            #itm4 {
+                -webkit-order: 0;
+                order: 0;
+            }
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <div class="item" id="itm1">itm1</div>
+        <div class="item" id="itm2">itm2</div>
+        <div class="item" id="itm3">itm3</div>
+        <div class="item" id="itm4">itm4</div>
+    </div>
+</body>
+</html>
